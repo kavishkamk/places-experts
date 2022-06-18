@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap'); */
 
 * {
   box-sizing: border-box;
 }
 
-html {
+/* html {
   font-family: 'Open Sans', sans-serif;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   background: #4d4d4d;
-}
+} */
 
-.slide-in-left-enter {
+/* .slide-in-left-enter {
   transform: translateX(-100%);
 }
 
@@ -32,11 +36,11 @@ body {
   transform: translateX(-100%);
   opacity: 0;
   transition: all 200ms;
-}
+} */
 
-.center {
+/* .center {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
