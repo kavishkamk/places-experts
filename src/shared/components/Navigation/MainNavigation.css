@@ -1,0 +1,23 @@
+@tailwind base;
+
+@layer base {
+    button {
+        @apply w-12 h-12 bg-transparent border-none flex flex-col justify-around m-8 cursor-pointer md:hidden;
+    }
+
+    h1 {
+        @apply text-white;
+    }
+}
+
+.div-a {
+    @apply no-underline text-white text-2xl font-bold;
+}
+
+.main-nav-header {
+    @apply hidden md:block;
+}
+
+.drawer-nav {
+    @apply h-full;
+}

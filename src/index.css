@@ -12,12 +12,7 @@
   font-family: 'Open Sans', sans-serif;
 } */
 
-/* body {
-  margin: 0;
-  background: #4d4d4d;
-} */
-
-/* .slide-in-left-enter {
+.slide-in-left-enter {
   transform: translateX(-100%);
 }
 
@@ -36,11 +31,4 @@
   transform: translateX(-100%);
   opacity: 0;
   transition: all 200ms;
-} */
-
-/* .center {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+}

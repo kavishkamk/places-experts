@@ -1,0 +1,7 @@
+.users-list {
+    @apply list-none my-0 mx-auto p-0 w-9/10 max-w-3.25 flex justify-center flex-wrap;
+}
+
+.msg-div {
+    @apply flex justify-center content-center text-center;
+}

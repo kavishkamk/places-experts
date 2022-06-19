@@ -1,0 +1,7 @@
+@tailwind base;
+
+@layer base {
+    span {
+        @apply block w-12 h-6.125 bg-white;
+    }
+}
