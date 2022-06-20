@@ -1,0 +1,45 @@
+.button {
+    @apply text-inherit py-2 px-6 border border-solid border-headred rounded bg-headred text-white
+        cursor-pointer m-4 no-underline inline-block;
+}
+  
+.button:focus {
+    @apply outline-none;
+}
+  
+.button:hover,
+.button:active {
+    @apply bg-btnred border-btnred;
+}
+  
+.button--inverse {
+    @apply bg-transparent text-headred;
+}
+  
+.button--inverse:hover,
+.button--inverse:active {
+    @apply text-white bg-headred;
+}
+  
+.button--danger {
+    @apply bg-dangerred border-dangerred;
+}
+  
+.button--danger:hover,
+.button--danger:active {
+    @apply bg-dangerhov border-dangerhov;
+}
+  
+.button:disabled,
+.button:hover:disabled,
+.button:active:disabled {
+    @apply bg-pgray text-dustygray border-pgray cursor-not-allowed;
+}
+  
+.button--small {
+    @apply text-smm;
+}
+  
+.button--big {
+    @apply text-2xl;
+}

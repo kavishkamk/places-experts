@@ -1,0 +1,46 @@
+.place-item {
+    @apply my-4 mx-0;
+}
+  
+.place-item_content {
+    @apply p-0;
+}
+  
+.place-item_info {
+    @apply p-4 text-center;
+}
+  
+.place-item_image {
+    @apply w-full h-50 mr-6 md:h-80;
+}
+  
+.place-item_image img {
+    @apply w-full h-full object-cover;
+}
+  
+.place-item_info h2,
+.place-item_info h3,
+.place-item_info p {
+    @apply mt-0 mx-0 mb-2;
+}
+  
+.place-item_actions {
+    @apply p-4 text-center border-t border-solid border-t-pgray;
+}
+  
+.place-item_modal-content {
+    @apply p-0;
+}
+  
+.place-item_modal-actions {
+    @apply text-right;
+}
+
+.map-container {
+    @apply h-80 w-full;
+}
+  
+.place-item_actions button,
+.place-item_actions a {
+    @apply m-2;
+}

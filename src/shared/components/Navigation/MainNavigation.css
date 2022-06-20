@@ -1,13 +1,13 @@
 @tailwind base;
 
 @layer base {
-    button {
-        @apply w-12 h-12 bg-transparent border-none flex flex-col justify-around m-8 cursor-pointer md:hidden;
-    }
-
     h1 {
         @apply text-white;
     }
+}
+
+.nav-links-btn {
+    @apply w-12 h-12 bg-transparent border-none flex flex-col justify-around m-8 cursor-pointer md:hidden;
 }
 
 .div-a {

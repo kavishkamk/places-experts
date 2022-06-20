@@ -31,7 +31,7 @@ const MainNavigation = () => {
             </SideDrawer>
             
             <MainHeader>
-                <button onClick={changeDrawerIsOpen}>
+                <button onClick={changeDrawerIsOpen} className="nav-links-btn">
                     <NavBtnSpan />
                     <NavBtnSpan />
                     <NavBtnSpan />

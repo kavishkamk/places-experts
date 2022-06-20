@@ -12,6 +12,10 @@
   font-family: 'Open Sans', sans-serif;
 } */
 
+.center {
+  @apply text-center flex justify-center items-center;
+}
+
 .slide-in-left-enter {
   transform: translateX(-100%);
 }

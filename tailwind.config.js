@@ -10,20 +10,29 @@ module.exports = {
         'headred': '#ff0055',
         'bgnav': '#f8df00',
         'backdropcolor': 'rgba(0, 0, 0, 0.75)',
+        'pgray': '#ccc',
+        'btnred': '#ff4382',
+        'dangerred': '#830000',
+        'dangerhov': '#f34343',
+        'dustygray': '#979797',
+        'christalle': '#2a006e',
       },
       width: {
         'cardw': 'calc(45% - 2rem)',
         '9/10': '90%',
         '7/10': '70%',
+        '160': '40rem',
       },
       minWidth: {
         '70': '17.5rem',
       },
       maxWidth: {
         '3.25': '50rem',
+        '2xs': '40rem',
       },
       height: {
         '6.125': '2.5px',
+        '50': '12.5rem',
       },
       borderRadius: {
         '50': "50%",
@@ -34,6 +43,14 @@ module.exports = {
       },
       zIndex: {
         '100': '100',
+      },
+      fontSize: {
+        'smm': '0.8rem',
+      },
+      inset: {
+        '22vh': '22vh',
+        '10p': '10%',
+        'lefs': 'calc(50% - 20rem)',
       },
     }
   },
