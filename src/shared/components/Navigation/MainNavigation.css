@@ -1,23 +1,23 @@
-@tailwind base;
-
-@layer base {
-    h1 {
-        @apply text-white;
-    }
+.main-navigation__title {
+    @apply text-white;
 }
 
-.nav-links-btn {
+.main-navigation__menu-btn span {
+    @apply block w-12 h-6.125 bg-white;
+}
+
+.main-navigation__menu-btn {
     @apply w-12 h-12 bg-transparent border-none flex flex-col justify-around m-8 cursor-pointer md:hidden;
 }
 
-.div-a {
+..main-navigation__title a {
     @apply no-underline text-white text-2xl font-bold;
 }
 
-.main-nav-header {
+.main-navigation__header-nav {
     @apply hidden md:block;
 }
 
-.drawer-nav {
+.main-navigation__drawer-nav {
     @apply h-full;
 }

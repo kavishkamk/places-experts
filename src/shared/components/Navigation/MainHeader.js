@@ -4,7 +4,7 @@ import "./MainHeader.css";
 
 const MainHeader = props => {
     return (
-        <header className="md:justify-between">
+        <header className="main-header">
             {props.children}
         </header>
     );

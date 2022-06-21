@@ -7,7 +7,7 @@ import "./UserList.css";
 const UsersList = props => {
     if (props.items.length === 0) {
         return (
-            <div className="msg-div">
+            <div className="center">
                 <Card>
                     <h1>No user found.</h1>
                 </Card>

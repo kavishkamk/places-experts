@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 import MainHeader from "./MainHeader";
-import NavBtnSpan from "./NavBtnSpan";
 import NavLinks from "./NavLinks";
 import SideDrawer from "./SideDrawer";
 import Backdrop from "../UIElements/Backdrop";
@@ -25,21 +24,21 @@ const MainNavigation = () => {
         <React.Fragment>
             {drawerIsOpen && (<Backdrop onClick={closeDrawer} />) }
             <SideDrawer show={drawerIsOpen} onClick={closeDrawer}>
-                <nav className="drawer-nav">
+                <nav className="main-navigation__drawer-nav">
                     <NavLinks />
                 </nav>
             </SideDrawer>
             
             <MainHeader>
-                <button onClick={changeDrawerIsOpen} className="nav-links-btn">
-                    <NavBtnSpan />
-                    <NavBtnSpan />
-                    <NavBtnSpan />
+                <button onClick={changeDrawerIsOpen} className="main-navigation__menu-btn">
+                    <span />
+                    <span />
+                    <span />
                 </button>
-                <h1>
-                    <Link to="/" className="div-a">Your Places</Link>
+                <h1 className="main-navigation__title">
+                    <Link to="/">Your Places</Link>
                 </h1>
-                <nav className="main-nav-header">
+                <nav className="main-navigation__header-nav">
                     <NavLinks />
                 </nav>
             </MainHeader>
