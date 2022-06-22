@@ -16,6 +16,10 @@ module.exports = {
         'dangerhov': '#f34343',
         'dustygray': '#979797',
         'christalle': '#2a006e',
+        'alabaster': '#f8f8f8',
+        'gallery': '#ebebeb',
+        'pigment-indigo': '#510077',
+        'cosmos': '#ffd1d1',
       },
       width: {
         'cardw': 'calc(45% - 2rem)',
@@ -51,6 +55,9 @@ module.exports = {
         '22vh': '22vh',
         '10p': '10%',
         'lefs': 'calc(50% - 20rem)',
+      },
+      padding: {
+        '0.15': '0.15rem',
       },
     }
   },
