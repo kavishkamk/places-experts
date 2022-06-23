@@ -1,42 +1,38 @@
-import React, {useCallback, useReducer} from "react";
+import React from "react";
 
 import Input from "../../shared/components/FormElements/Input";
 import { VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE } from "../../shared/util/validators";
 import Button from "../../shared/components/FormElements/Button";
+import { useForm } from "../../shared/hooks/form-hook";
 
-import "./NewPlaces.css";
-
-const formReducer = (state, action) => {
-    switch (action.type) {
-        case "INPUT_CHANGE":
-            let isFormValid = true;
-            for (const inputId in state.input) {
-                if (inputId === action.id) {
-                    isFormValid = isFormValid && action.isValid;
-                } else {
-                    isFormValid = isFormValid && state.input[inputId].isValid;
-                }
-            }
-            return {
-                ...state,
-                input: {
-                    ...state.input,
-                    [action.id]: {
-                        value: action.value,
-                        isValid: action.isValid
-                    }
-                },
-                isValid: isFormValid
-            };
-        default:
-            return state;
-    }
-};
+import "./PlaceForm.css";
 
 const NewPlace = () => {
 
-    const [formState, dispatch] = useReducer(formReducer, {
-        input: {
+    // const [formState, dispatch] = useReducer(formReducer, {
+    //     input: {
+    //         title: {
+    //             value: "",
+    //             isValid: false
+    //         },
+    //         description: {
+    //             value: "",
+    //             isValid: false
+    //         },
+    //         address: {
+    //             value: "",
+    //             isValid: false
+    //         }
+    //     },
+    //     isValid: false
+    // });
+
+    // const inputHandlere = useCallback((id, value, isValid) => {
+    //     dispatch({type: "INPUT_CHANGE", id: id, value: value, isValid: isValid });
+    // }, []);
+
+    const [formState, inputHandlere] = useForm(
+        {
             title: {
                 value: "",
                 isValid: false
@@ -44,14 +40,14 @@ const NewPlace = () => {
             description: {
                 value: "",
                 isValid: false
+            },
+            address: {
+                value: "",
+                isValid: false
             }
         },
-        isValid: false
-    });
-
-    const inputHandlere = useCallback((id, value, isValid) => {
-        dispatch({type: "INPUT_CHANGE", id: id, value: value, isValid: isValid });
-    }, []);
+        false
+    );
 
     // form submision function -> this will send data to the backend
     const formSubmitHandler = event => {
@@ -76,7 +72,7 @@ const NewPlace = () => {
                 type="text" 
                 label="Description" 
                 validators={[VALIDATOR_MINLENGTH(5)]} 
-                errorMsg="Please Enter a valid Description."
+                errorMsg="Please Enter a valid Description. (Min. 5 characters)"
                 onInput={inputHandlere} 
             />
             <Input 

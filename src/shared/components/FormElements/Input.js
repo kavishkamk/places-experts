@@ -27,7 +27,11 @@ const Input = props => {
     };
 
     // this reduser keep states of the input field
-    const [inputState, dispatch] = useReducer(inputReducer, {value: "", isValid: false, isTouched: false});
+    const [inputState, dispatch] = useReducer(inputReducer, {
+        value: props.value || "", 
+        isValid: props.valid || false, 
+        isTouched: false
+    });
 
     // this is onChange event
     const changeHandler = event => {
