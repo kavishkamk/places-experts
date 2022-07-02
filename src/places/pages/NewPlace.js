@@ -9,28 +9,6 @@ import "./PlaceForm.css";
 
 const NewPlace = () => {
 
-    // const [formState, dispatch] = useReducer(formReducer, {
-    //     input: {
-    //         title: {
-    //             value: "",
-    //             isValid: false
-    //         },
-    //         description: {
-    //             value: "",
-    //             isValid: false
-    //         },
-    //         address: {
-    //             value: "",
-    //             isValid: false
-    //         }
-    //     },
-    //     isValid: false
-    // });
-
-    // const inputHandlere = useCallback((id, value, isValid) => {
-    //     dispatch({type: "INPUT_CHANGE", id: id, value: value, isValid: isValid });
-    // }, []);
-
     const [formState, inputHandlere] = useForm(
         {
             title: {
