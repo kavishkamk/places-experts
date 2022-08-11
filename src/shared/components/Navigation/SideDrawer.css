@@ -1,0 +1,3 @@
+.side-drawer {
+    @apply fixed left-0 top-0 z-100 h-screen w-7/10 bg-white shadow-cardshadow md:hidden;
+}

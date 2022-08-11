@@ -1,0 +1,55 @@
+.nav-links {
+    @apply no-underline m-0 p-0 w-full h-full flex flex-col justify-center items-center;
+}
+  
+.nav-links li {
+    @apply m-4;
+}
+  
+.nav-links a {
+    @apply border border-solid border-transparent text-darkblack no-underline p-2;
+}
+  
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a.active {
+    @apply bg-bgnav border-darkblack text-darkblack;
+}
+  
+.nav-links button {
+    @apply cursor-pointer border border-solid border-darkblack text-darkblack bg-transparent p-2;
+    font: inherit;
+}
+  
+.nav-links button:focus {
+    @apply outline-none;
+}
+  
+.nav-links button:hover,
+.nav-links button:active {
+    @apply bg-darkblack text-white;
+}
+  
+@media (min-width: 768px) {
+    .nav-links {
+        @apply flex-row;
+    }
+  
+    .nav-links li {
+        @apply my-0 mx-2;
+    }
+  
+    .nav-links a {
+        @apply text-white no-underline;
+    }
+  
+    .nav-links button {
+        @apply border border-solid border-white text-white bg-transparent;
+    }
+    
+    .nav-links button:hover,
+    .nav-links button:active {
+        @apply bg-bgnav text-darkblack;
+    }
+}
+  

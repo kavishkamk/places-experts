@@ -1,0 +1,7 @@
+.avatar {
+    @apply w-full h-full flex justify-center items-center;
+}
+
+.avatar img {
+    @apply block rounded-50 w-full h-full object-cover;
+}

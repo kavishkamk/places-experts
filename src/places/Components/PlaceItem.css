@@ -1,0 +1,50 @@
+.place-item {
+    @apply my-4 mx-0;
+}
+  
+.place-item__content {
+    @apply p-0;
+}
+  
+.place-item__info {
+    @apply p-4 text-center;
+}
+  
+.place-item__image {
+    @apply w-full h-50 mr-6 md:h-80;
+}
+  
+.place-item__image img {
+    @apply w-full h-full object-cover;
+}
+
+.map-head {
+    @apply w-full h-full;
+}
+  
+.place-item__info h2,
+.place-item__info h3,
+.place-item__info p {
+    @apply mt-0 mx-0 mb-2;
+}
+  
+.place-item__actions {
+    @apply p-4 text-center border-t border-solid border-t-pgray;
+}
+  
+.place-item__modal-content {
+    @apply p-0;
+}
+  
+.place-item__modal-actions {
+    @apply text-right;
+}
+
+.place-item__actions button,
+.place-item__actions a {
+  @apply m-2;
+}
+
+.map-container {
+    @apply h-60 w-full;
+}

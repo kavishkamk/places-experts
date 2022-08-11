@@ -1,0 +1,33 @@
+.form-control {
+    @apply my-4 mx-0;
+}
+  
+.form-control label,
+.form-control input,
+.form-control textarea {
+    @apply block;
+}
+  
+.form-control label {
+    @apply font-bold mb-2;
+}
+  
+.form-control input,
+.form-control textarea {
+    @apply text-inherit w-full border border-solid border-pgray bg-alabaster py-0.15 px-1;
+}
+  
+.form-control input:focus,
+.form-control textarea:focus {
+    @apply outline-none bg-gallery border-pigment-indigo;
+}
+  
+.form-control--invalid label,
+.form-control--invalid p {
+    @apply text-red-500;
+}
+  
+.form-control--invalid input,
+.form-control--invalid textarea {
+    @apply border-red-500 bg-cosmos;
+}

@@ -1,0 +1,7 @@
+.main-header {
+    @apply w-full h-16 flex items-center fixed top-0 left-0 bg-headred shadow-headshadow py-0 px-4 z-10 md:justify-between;
+}
+
+main {
+    @apply mt-24;
+}
