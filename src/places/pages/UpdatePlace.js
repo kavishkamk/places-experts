@@ -64,11 +64,11 @@ const UpdatePlace = () => {
             await sendRequest(
                 `places/${placeId}`,
                 "PATCH",
-                {"Content-Type" : "application/json"},
                 JSON.stringify({
                     title : formState.input.title.value, 
                     description: formState.input.description.value
-                })
+                }),
+                {"Content-Type" : "application/json"}
             );
             history.push('/' + auth.userId + '/places');
         } catch (error) {}

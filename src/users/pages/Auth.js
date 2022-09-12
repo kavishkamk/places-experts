@@ -9,6 +9,7 @@ import { AuthContext } from "../../shared/context/auth-context";
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner";
 import ErrorModal from "../../shared/components/UIElements/ErrorModal";
 import { useHttpClient } from "../../shared/hooks/http-hook";
+import ImageUpload from "../../shared/components/FormElements/ImageUpload";
 
 import "./Auth.css";
 
@@ -37,7 +38,8 @@ const Auth = () => {
         if(!isLogging) {
             setFormData({
                     ...formState.input,
-                    name: undefined
+                    name: undefined,
+                    image: undefined
                 } ,
                 formState.input.usermail.isValid && formState.input.userpwd.isValid
             );
@@ -46,6 +48,10 @@ const Auth = () => {
                     ...formState.input,
                     name: {
                         value: "",
+                        isValid: false
+                    },
+                    image: {
+                        value: null,
                         isValid: false
                     }
                 },
@@ -57,19 +63,20 @@ const Auth = () => {
 
     const authUserData = async event => {
         event.preventDefault();
+        console.log(formState.input);
 
         if (isLogging) {
             try {
                 const responseData = await sendRequest(
                     "users/login",
                     "POST",
-                    {
-                        "Content-Type": "application/json"
-                    },
                     JSON.stringify({
                         password: formState.input.userpwd.value,
                         email: formState.input.usermail.value,
-                    })
+                    }),
+                    {
+                        "Content-Type": "application/json"
+                    }
                 );
 
                 auth.login(responseData.user.id);
@@ -77,16 +84,14 @@ const Auth = () => {
             }
         } else {
             try {
+                const formData = new FormData();
+                formData.append("username", formState.input.name.value);
+                formData.append("password", formState.input.userpwd.value);
+                formData.append("email", formState.input.usermail.value);
+                formData.append("image", formState.input.image.value);
                 const responseData = await sendRequest("users/signup",
                     "POST",
-                    {
-                        "Content-Type": "application/json"
-                    },
-                    JSON.stringify({
-                        username: formState.input.name.value,
-                        password: formState.input.userpwd.value,
-                        email: formState.input.usermail.value,
-                    })
+                    formData
                 );
                 auth.login(responseData.user.id);
             } catch (err) {
@@ -113,6 +118,9 @@ const Auth = () => {
                         onInput={inputHandlere}
                     />
                 )}
+                {
+                    !isLogging && (<ImageUpload center id="image" onInput={inputHandlere} errorText="Please select a image"/>)
+                }
                 <Input 
                     id="usermail"
                     element="input"

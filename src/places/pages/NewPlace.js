@@ -9,6 +9,7 @@ import { useHttpClient } from "../../shared/hooks/http-hook";
 import { AuthContext } from "../../shared/context/auth-context";
 import ErrorModal from "../../shared/components/UIElements/ErrorModal";
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner";
+import ImageUpload from "../../shared/components/FormElements/ImageUpload";
 
 import "./PlaceForm.css";
 
@@ -29,6 +30,10 @@ const NewPlace = () => {
             address: {
                 value: "",
                 isValid: false
+            },
+            image : {
+                value: "",
+                isValid: false
             }
         },
         false
@@ -39,19 +44,18 @@ const NewPlace = () => {
     // form submision function -> this will send data to the backend
     const formSubmitHandler = async event => {
         event.preventDefault();
-        console.log(formState);
 
         try {
+            const formData = new FormData();
+            formData.append("title", formState.input.title.value);
+            formData.append("description", formState.input.description.value);
+            formData.append("address", formState.input.address.value);
+            formData.append("creator", auth.userId);
+            formData.append("image", formState.input.image.value);
             await sendRequest(
                 "places",
                 "POST",
-                {"Content-Type" : "application/json"},
-                JSON.stringify({
-                    title: formState.input.title.value,
-                    description: formState.input.description.value,
-                    address: formState.input.address.value,
-                    creator: auth.userId
-                })
+                formData
             );
            history.push("/");
         } catch (error) {
@@ -71,6 +75,12 @@ const NewPlace = () => {
                     validators={[VALIDATOR_REQUIRE()]} 
                     errorMsg="Please Enter a valid Title."
                     onInput={inputHandlere} 
+                />
+                <ImageUpload 
+                    center 
+                    id="image" 
+                    onInput={inputHandlere}
+                    errorText="Please select a image"
                 />
                 <Input 
                     id="description"
