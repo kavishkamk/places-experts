@@ -50,12 +50,14 @@ const NewPlace = () => {
             formData.append("title", formState.input.title.value);
             formData.append("description", formState.input.description.value);
             formData.append("address", formState.input.address.value);
-            formData.append("creator", auth.userId);
             formData.append("image", formState.input.image.value);
             await sendRequest(
                 "places",
                 "POST",
-                formData
+                formData,
+                {
+                    authorization: "Bearer " + auth.token
+                }
             );
            history.push("/");
         } catch (error) {

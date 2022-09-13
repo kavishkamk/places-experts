@@ -63,7 +63,6 @@ const Auth = () => {
 
     const authUserData = async event => {
         event.preventDefault();
-        console.log(formState.input);
 
         if (isLogging) {
             try {
@@ -79,7 +78,7 @@ const Auth = () => {
                     }
                 );
 
-                auth.login(responseData.user.id);
+                auth.login(responseData.userId, responseData.token);
             } catch (err) {
             }
         } else {
@@ -93,7 +92,7 @@ const Auth = () => {
                     "POST",
                     formData
                 );
-                auth.login(responseData.user.id);
+                auth.login(responseData.userId, responseData.token);
             } catch (err) {
             }
         }

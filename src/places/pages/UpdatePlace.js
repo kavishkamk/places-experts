@@ -68,7 +68,10 @@ const UpdatePlace = () => {
                     title : formState.input.title.value, 
                     description: formState.input.description.value
                 }),
-                {"Content-Type" : "application/json"}
+                {
+                    "Content-Type" : "application/json",
+                    authorization : "bearer " + auth.token
+                }
             );
             history.push('/' + auth.userId + '/places');
         } catch (error) {}
