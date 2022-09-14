@@ -16,8 +16,8 @@ export const useHttpClient = () => {
         try {
             const response = await fetch(`${process.env.REACT_APP_API_KEY}${path}`, {
                 method,
-                headers,
                 body,
+                headers,
                 signal: httpAbortCtrl.signal
             });
     
