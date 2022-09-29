@@ -13,5 +13,5 @@ Technologies Used -> React.Js, Tailwind CSS, Google Map API, HTML, CSS, JavaScri
 
 <img src="https://github.com/kavishkamk/kavishkamk.github.io/blob/main/images/projects/placeExpertArchitectureDiagram.png" alt="Alt text" title="Archecture diagram">
 <img src="https://github.com/kavishkamk/kavishkamk.github.io/blob/main/images/projects/placeExpertApiEndpint.png" alt="End Point" title="End Point API">
-<img src="https://github.com/kavishkamk/places-experts/edit/master/README.md" alt="map" title="Google Map">
+<img src="https://github.com/kavishkamk/kavishkamk.github.io/blob/main/images/projects/placeExpertMap.png" alt="map" title="Google Map">
 <img src="https://github.com/kavishkamk/kavishkamk.github.io/blob/main/images/projects/placeExpert1.png" alt="Alt text" title="Optional title">
